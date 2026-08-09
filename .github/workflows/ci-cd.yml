@@ -57,6 +57,11 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::522921482434:role/github-actions-terraform-devops
           aws-region: ${{ env.AWS_REGION }}
+      - name: Configure GCP credentials
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: 'projects/176662900771/locations/global/workloadIdentityPools/github-pool/providers/github-provider'
+          service_account: 'github-actions-gcp@project-fec7a4c9-6be3-413d-bbd.iam.gserviceaccount.com'
       - name: Install Terraform
         uses: hashicorp/setup-terraform@v3
         with:

@@ -84,13 +84,14 @@ Este repo empieza a extenderse más allá de AWS bajo el mismo state de Terrafor
 |---|---|
 | Provider `google` configurado junto a `aws` | ✅ |
 | Módulo `modules/gcs_bucket` (Cloud Storage, acceso público bloqueado, versionado) | ✅ verificado con `terraform plan` |
+| Workload Identity Federation para CI/CD (equivalente a OIDC en AWS) | ✅ |
 | `terraform apply` en GCP | ⏳ pendiente |
-| Workload Identity Federation para CI/CD (equivalente a OIDC en AWS) | ⏳ pendiente |
 
 ## Roadmap
 
 - [x] IaC completo, CI/CD, observabilidad, auto-scaling, OIDC
 - [x] Provider GCP + primer módulo (GCS)
+- [x] Autenticación GCP en CI/CD (Workload Identity Federation)
 - [ ] ArgoCD (GitOps)
 - [ ] Escaneo de imágenes (Trivy) + políticas de admisión (Kyverno)
 
