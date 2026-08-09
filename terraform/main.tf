@@ -53,3 +53,8 @@ module "cloudwatch" {
   environment  = var.environment
   cluster_name = module.eks.cluster_name
 }
+
+module "gcs_bucket" {
+  source      = "../modules/gcs_bucket"
+  bucket_name = "lracloudops-gcs-devops-lab"
+}
